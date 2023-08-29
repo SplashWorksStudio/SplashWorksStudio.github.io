@@ -89,7 +89,7 @@
 /* ============================================================================================= */
 
 * {
-	font-size: 1em;
+	font-size: 1.25em;
 	font-family: inherit;
 }
 
@@ -196,7 +196,7 @@ a:active {
 /* PARAGRAPHS */
 
 p {
-	font-size: var(--font-size);
+	font-size: var(--font-size-2);
 	line-height: 1.5;
 	margin: 1rem 0;
 }
@@ -261,6 +261,7 @@ li {
 	margin-top: var(--spacing-thin);
 	margin-bottom: var(--spacing-thin);
 	padding-left: 0.5em;
+	font-size: var(--font-size-2);
 }
 
 /* ARTICLES & SECTIONS */
