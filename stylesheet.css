@@ -1,0 +1,324 @@
+/* ============================================================================================= */
+/* ================================================================================= THEME ===== */
+/* ============================================================================================= */
+
+/* COLORS */
+
+:root {
+	/* Raw Colors */
+	--white: rgb(255, 255, 255);
+	--white-dark: rgb(221, 221, 221);
+	--black-light: rgb(34, 34, 34);
+	--black: rgb(0, 0, 0);
+
+	--red-light: rgb(225, 108, 133);
+	--red: rgb(245, 54, 75);
+	--red-dark: rgb(145, 26, 55);
+	--orange-light: rgb(255, 216, 153);
+	--orange: rgb(249, 150, 21);
+	--orange-dark: rgb(186, 90, 4);
+	--green-light: rgb(218, 255, 148);
+	--green: rgb(104, 240, 0);
+	--green-dark: rgb(55, 178, 4);
+	--blue-light: rgb(59, 213, 255);
+	--blue: rgb(32, 179, 251);
+	--blue-dark: rgb(22, 99, 191);
+	--purple-light: rgb(255, 141, 252);
+	--purple: rgb(209, 31, 252);
+	--purple-dark: rgb(92, 27, 155);
+
+	--sand: rgb(245, 225, 164);
+
+	--peach-light: rgb(246, 204, 162); 
+	--peach: rgb(241, 143, 112);
+
+	/* Theme Colors */
+	--text-color-primary: var(--black-light);
+	--text-color-secondary: var(--white);
+
+	--primary-color-light: var(--red-light);
+	--primary-color: var(--red);
+	--primary-color-dark: var(--red-dark);
+	--secondary-color-light: var(--purple-light);
+	--secondary-color: var(--purple);
+	--secondary-color-dark: var(--purple-dark);
+
+	--background-color-light: var(--peach-light);
+	--background-color-dark: var(--peach);
+
+	--article-color: var(--sand);
+
+	--navbar-color: var(--sand);
+	--navbar-text-color: var(--black-light);
+}
+
+/* MEASUREMENTS */
+
+:root {
+	/* Font Sizes */
+	--font-size-0: 0.75em;
+	--font-size-1: 1em;
+	--font-size-2: 1.25em;
+	--font-size-3: 1.5em;
+	--font-size-4: 1.5em;
+	--font-size-5: 1.75em;
+	--font-size-6: 2em;
+	--font-size-7: 2.5em;
+
+	/* Spacing */
+	--spacing-thin: 0.25rem;
+	--spacing-medium: 0.5rem;
+	--spacing-thick: 1rem;
+
+	/* Rounded Corners */
+	--border-radius-small: 0.125em;
+	--border-radius-medium: 0.25em;
+	--border-radius-large: 0.5em;
+}
+
+/* OTHER */
+:root {
+	/* Transition timings */
+	--transition-speed-slow: 0.25s;
+	--transition-speed-medium: 0.125s;
+	--transition-speed-fast: 0.05s;
+}
+
+/* ============================================================================================= */
+/* ================================================================================ STYLES ===== */
+/* ============================================================================================= */
+
+* {
+	font-size: 1em;
+	font-family: inherit;
+}
+
+html, body {
+	color: var(--text-color-primary);
+	background-color: var(--background-color-dark);
+	font-size: var(--font-size);
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	opacity: 1;
+	transition: opacity var(--transition-speed);
+}
+
+/* Hide content if display is way too thin to meaningfully display anything */
+@media only screen and (max-width: 300px) {
+	body {
+		opacity: 0;
+	}
+}
+
+/* NAVBAR */
+
+#navbar {
+	color: var(--navbar-text-color);
+	background-color: var(--navbar-color);
+	width: 100%;
+	position: fixed;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+#navbar .right {
+	float: right;
+}
+
+#navbar a {
+	color: var(--navbar-text-color);
+	display: inline;
+	float: left;
+}
+
+#navbar a:hover {
+	color: var(--primary-color);
+	transform: scale(100%, 125%);
+}
+
+/* BUTTONS */
+
+#navbar a,
+a.button,
+a.button:visited {
+	font-weight: bold;
+	font-size: var(--font-size-1); /* Update article padding-top if this changes! */
+	margin: var(--spacing-thick); /* Update article padding-top if this changes! */
+	padding: var(--spacing-medium); /* Update article padding-top-pad if this changes! */
+	border-radius: var(--border-radius-large);
+}
+
+a.button,
+a.button:visited {
+	color: var(--black-light) !important;
+	margin: 0;
+	box-shadow: 0 4px var(--primary-color-dark);
+	transform: translateY(-2px);
+	transition: all var(--transition-speed-fast);
+}
+
+a.button,
+a.button:focus {
+	color: var(--black-light);
+	background-color: var(--primary-color);
+}
+
+a.button:hover {
+	color: var(--white) !important;
+}
+
+a.button:active {
+	box-shadow: none;
+	transform: translateY(2px);
+}
+
+/* LINKS */
+
+a, a:visited {
+	color: var(--blue-dark);
+	text-decoration: none;
+	transition: all var(--transition-speed-fast);
+}
+
+a:hover, a:focus, a:active {
+	color: var(--blue);
+}
+
+a:hover,
+a:focus,
+a:active {
+	border-bottom: none !important; /* Remove ugly default blue outline) */
+}
+
+/* PARAGRAPHS */
+
+p {
+	font-size: var(--font-size);
+	line-height: 1.5;
+	margin: 1rem 0;
+}
+
+p:first-child {
+	margin-top: 0;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+/* HEADERS */
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	color: var(--primary-color-dark);
+	margin-top: calc(2 * var(--spacing-thick));
+	margin-bottom: var(--spacing-thick);
+}
+
+h1 {
+	color: var(--primary-color);
+	font-size: var(--font-size-7);
+}
+
+h2 {
+	font-size: var(--font-size-6);
+}
+
+h3 {
+	font-size: var(--font-size-5);
+}
+
+h4, h4, h6 {
+	font-size: var(--font-size-4);
+}
+
+/* TEXT STYLING */
+
+i, .italic {
+	font-size: inherit;
+	color: inherit;
+	font-style: italic;
+}
+
+b, .bold {
+	font-size: inherit;
+	color: inherit;
+	font-weight: bold;
+}
+
+mark, span {
+	/* Remove default mark/span styling so it can be used for things later */
+	color: inherit;
+	background-color: transparent;
+}
+
+/* LISTS */
+
+li {
+	margin-top: var(--spacing-thin);
+	margin-bottom: var(--spacing-thin);
+	padding-left: 0.5em;
+}
+
+/* ARTICLES & SECTIONS */
+
+article {
+	background-color: var(--article-color);
+	max-width: 900px;
+	width: 100%;
+	margin: auto;
+	/* 2 x button padding + 2 x button margin + text height */
+	padding-top: calc(2 * var(--spacing-medium) + 2 * var(--spacing-thick) + var(--font-size-1));
+	margin-bottom: -100px;
+	padding-bottom: 100px;
+}
+
+article section {
+	padding: 0 var(--spacing-thick);
+	margin: 0;
+}
+
+section img,
+section video {
+	width: calc(100% + 2rem);
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+
+/* SCREEN SIZE CHANGES */
+
+/* Make navbar vertical on small screens or touch screens. */
+@media only screen and (max-width: 700px), only screen and (hover: none) and (pointer: coarse) and (max-width: 1000px) {
+	#navbar {
+		position: relative !important;
+		display: inline-block;
+		padding-bottom: var(--spacing-thick);
+		margin-bottom: -0.25em; /* Fix weird gap that shows up, idk why */
+		text-align: center;
+	}
+	
+	#navbar a {
+		float: none;
+		display: block;
+		/* 100% - 2 x margin - 2 x padding */
+		width: calc(100% - 2 * var(--spacing-thick) - 2 * var(--spacing-medium));
+	}
+
+	#navbar a:last-child {
+		margin-bottom: 0;
+	}
+
+	article {
+		padding-top: 0 !important;
+	}
+}
+
+/* Make articles fill the page width when on smaller screens and on mobile */
+@media only screen and (max-width: 900px), only screen and (hover: none) and (pointer: coarse) and (max-width: 1000px) {
+	article {
+		max-width: calc(100% - 2rem);
+	}
+}
