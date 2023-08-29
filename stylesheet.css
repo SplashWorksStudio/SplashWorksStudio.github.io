@@ -89,14 +89,14 @@
 /* ============================================================================================= */
 
 * {
-	font-size: 1.25em;
+	font-size: 1em;
 	font-family: inherit;
 }
 
 html, body {
 	color: var(--text-color-primary);
 	background-color: var(--background-color-dark);
-	font-size: var(--font-size);
+	font-size: var(--font-size-1);
 	font-family: sans-serif;
 	margin: 0;
 	padding: 0;
@@ -119,6 +119,7 @@ body {
 #navbar {
 	color: var(--navbar-text-color);
 	background-color: var(--navbar-color);
+	font-size: 1.25em;
 	width: 100%;
 	position: fixed;
 	z-index: 100;
@@ -147,7 +148,7 @@ a.button:visited {
 	font-weight: bold;
 	font-size: var(--font-size-1); /* Update article padding-top if this changes! */
 	margin: var(--spacing-thick); /* Update article padding-top if this changes! */
-	padding: var(--spacing-medium); /* Update article padding-top-pad if this changes! */
+	padding: var(--spacing-medium) var(--spacing-thick); /* Update article padding-top-pad if this changes! */
 	border-radius: var(--border-radius-large);
 }
 
