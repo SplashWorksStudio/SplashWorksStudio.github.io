@@ -277,15 +277,15 @@ article {
 }
 
 article section {
-	padding: 0 var(--spacing-thick);
+	padding: 0 2rem;
 	margin: 0;
 }
 
 section img,
 section video {
-	width: calc(100% + 2rem);
-	margin-left: -1rem;
-	margin-right: -1rem;
+	width: calc(100% + 4rem);
+	margin-left: -2rem;
+	margin-right: -2rem;
 }
 
 /* SCREEN SIZE CHANGES */
@@ -319,6 +319,6 @@ section video {
 /* Make articles fill the page width when on smaller screens and on mobile */
 @media only screen and (max-width: 900px), only screen and (hover: none) and (pointer: coarse) and (max-width: 1000px) {
 	article {
-		max-width: calc(100% - 2rem);
+		max-width: calc(100% - 4rem);
 	}
 }
