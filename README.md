@@ -1,4 +1,4 @@
-# SplashWorksStudio.github.io
+# SplashWorks Studio Website
 
 Current website for SplashWorks Studio, developer of the game Grape Juice City.
 
