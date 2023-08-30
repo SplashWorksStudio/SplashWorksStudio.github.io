@@ -119,7 +119,9 @@ body {
 
 #navbar {
 	color: var(--navbar-text-color);
-	background-color: var(--navbar-color);
+	background-color: url(--navbar-color);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	font-size: 1.25em;
 	width: 100%;
 	position: fixed;
