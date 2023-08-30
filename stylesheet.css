@@ -29,7 +29,7 @@
 
 	--sand: rgb(245, 225, 164);
 
-	--peach-light: rgb(246, 204, 162); 
+	--peach-light: rgb(246, 204, 162);
 	--peach: rgb(241, 143, 112);
 
 	/* Theme Colors */
@@ -93,9 +93,10 @@
 	font-family: inherit;
 }
 
-html, body {
+html,
+body {
 	color: var(--text-color-primary);
-	background-color: var(--background-color-dark);
+	background-image: var("./background.png");
 	font-size: var(--font-size-1);
 	font-family: sans-serif;
 	margin: 0;
@@ -146,9 +147,12 @@ body {
 a.button,
 a.button:visited {
 	font-weight: bold;
-	font-size: var(--font-size-1); /* Update article padding-top if this changes! */
-	margin: var(--spacing-thick); /* Update article padding-top if this changes! */
-	padding: var(--spacing-medium) var(--spacing-thick); /* Update article padding-top-pad if this changes! */
+	font-size: var(--font-size-1);
+	/* Update article padding-top if this changes! */
+	margin: var(--spacing-thick);
+	/* Update article padding-top if this changes! */
+	padding: var(--spacing-medium) var(--spacing-thick);
+	/* Update article padding-top-pad if this changes! */
 	border-radius: var(--border-radius-large);
 }
 
@@ -178,20 +182,24 @@ a.button:active {
 
 /* LINKS */
 
-a, a:visited {
+a,
+a:visited {
 	color: var(--blue-dark);
 	text-decoration: none;
 	transition: all var(--transition-speed-fast);
 }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
 	color: var(--blue);
 }
 
 a:hover,
 a:focus,
 a:active {
-	border-bottom: none !important; /* Remove ugly default blue outline) */
+	border-bottom: none !important;
+	/* Remove ugly default blue outline) */
 }
 
 /* PARAGRAPHS */
@@ -212,7 +220,12 @@ p:last-child {
 
 /* HEADERS */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-weight: bold;
 	color: var(--primary-color-dark);
 	margin-top: calc(2 * var(--spacing-thick));
@@ -232,25 +245,30 @@ h3 {
 	font-size: var(--font-size-5);
 }
 
-h4, h4, h6 {
+h4,
+h4,
+h6 {
 	font-size: var(--font-size-4);
 }
 
 /* TEXT STYLING */
 
-i, .italic {
+i,
+.italic {
 	font-size: inherit;
 	color: inherit;
 	font-style: italic;
 }
 
-b, .bold {
+b,
+.bold {
 	font-size: inherit;
 	color: inherit;
 	font-weight: bold;
 }
 
-mark, span {
+mark,
+span {
 	/* Remove default mark/span styling so it can be used for things later */
 	color: inherit;
 	background-color: transparent;
@@ -293,15 +311,17 @@ section video {
 /* SCREEN SIZE CHANGES */
 
 /* Make navbar vertical on small screens or touch screens. */
-@media only screen and (max-width: 700px), only screen and (hover: none) and (pointer: coarse) and (max-width: 1000px) {
+@media only screen and (max-width: 700px),
+only screen and (hover: none) and (pointer: coarse) and (max-width: 1000px) {
 	#navbar {
 		position: relative !important;
 		display: inline-block;
 		padding-bottom: var(--spacing-thick);
-		margin-bottom: -0.25em; /* Fix weird gap that shows up, idk why */
+		margin-bottom: -0.25em;
+		/* Fix weird gap that shows up, idk why */
 		text-align: center;
 	}
-	
+
 	#navbar a {
 		float: none;
 		display: block;
@@ -319,7 +339,8 @@ section video {
 }
 
 /* Make articles fill the page width when on smaller screens and on mobile */
-@media only screen and (max-width: 900px), only screen and (hover: none) and (pointer: coarse) and (max-width: 1000px) {
+@media only screen and (max-width: 900px),
+only screen and (hover: none) and (pointer: coarse) and (max-width: 1000px) {
 	article {
 		max-width: calc(100% - 4rem);
 	}
