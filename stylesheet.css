@@ -96,7 +96,10 @@
 html,
 body {
 	color: var(--text-color-primary);
-	background-image: var("./background.png");
+	background-color: url("./background.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: contain;
 	font-size: var(--font-size-1);
 	font-family: sans-serif;
 	margin: 0;
@@ -119,10 +122,7 @@ body {
 
 #navbar {
 	color: var(--navbar-text-color);
-	background-color: url("./background.png");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: contain;
+	background-color: var(--navbar-color);
 	font-size: 1.25em;
 	width: 100%;
 	position: fixed;
