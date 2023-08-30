@@ -119,7 +119,7 @@ body {
 
 #navbar {
 	color: var(--navbar-text-color);
-	background-color: url(--navbar-color);
+	background-color: url("./background.png");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: contain;
