@@ -1,4 +1,31 @@
 /* ============================================================================================= */
+/* ================================================================================= FONTS ===== */
+/* ============================================================================================= */
+
+@font-face {
+	font-family: mainstay;
+	src: url(./fonts/mainstay.ttf);
+}
+
+@font-face {
+	font-family: passion-one;
+	src: url(./fonts/passion-one.ttf);
+}
+
+@font-face {
+	font-family: passion-one;
+	src: url(./fonts/passion-one-bold.ttf);
+	font-weight: bold;
+}
+
+:root {
+	/* Fonts */
+	--special-font: mainstay;
+	--header-font: passion-one;
+	--text-font: sans-serif;
+}
+
+/* ============================================================================================= */
 /* ================================================================================= THEME ===== */
 /* ============================================================================================= */
 
@@ -101,7 +128,7 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 	font-size: var(--font-size-1);
-	font-family: sans-serif;
+	font-family: var(--text-font);
 	margin: 0;
 	padding: 0;
 }
@@ -124,6 +151,7 @@ body {
 	color: var(--navbar-text-color);
 	background-color: var(--navbar-color);
 	font-size: 1.25em;
+	font-family: var(--title-font);
 	width: 100%;
 	position: fixed;
 	z-index: 100;
@@ -233,6 +261,7 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: var(--header-font);
 	font-weight: bold;
 	color: var(--primary-color-dark);
 	margin-top: calc(2 * var(--spacing-thick));
