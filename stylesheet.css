@@ -151,7 +151,7 @@ body {
 	color: var(--navbar-text-color);
 	background-color: var(--navbar-color);
 	font-size: 1.25em;
-	font-family: var(--title-font);
+	font-family: var(--special-font);
 	width: 100%;
 	position: fixed;
 	z-index: 100;
