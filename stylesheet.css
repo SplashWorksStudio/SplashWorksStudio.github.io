@@ -181,7 +181,6 @@ article {
 #navbar a,
 a.button,
 a.button:visited {
-	font-weight: bold;
 	font-size: var(--font-size-1);
 	/* Update article padding-top if this changes! */
 	margin: var(--spacing-thick);
